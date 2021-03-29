@@ -1121,7 +1121,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.13.10"
   resolved "http://npm.laiye.com/@babel%2fruntime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
   integrity sha1-R9QqV7YJX0Ro2kQDiP262L6/DX0=
@@ -5727,13 +5727,6 @@ import-from@^2.1.0:
   dependencies:
     resolve-from "^3.0.0"
 
-import-html-entry@^1.9.0:
-  version "1.11.1"
-  resolved "http://npm.laiye.com/import-html-entry/-/import-html-entry-1.11.1.tgz#3d8c5977926bdd122ab8e658965c102068b4af8d"
-  integrity sha1-PYxZd5Jr3RIquOZYllwQIGi0r40=
-  dependencies:
-    "@babel/runtime" "^7.7.2"
-
 import-local@^2.0.0:
   version "2.0.0"
   resolved "http://npm.laiye.com/import-local/-/import-local-2.0.0.tgz#55070be38a5993cf18ef6db7e961f5bee5c5a09d"
@@ -8938,17 +8931,6 @@ q@^1.1.2:
   resolved "http://npm.laiye.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qiankun@2.4.0:
-  version "2.4.0"
-  resolved "http://npm.laiye.com/qiankun/-/qiankun-2.4.0.tgz#e0c847fcee1e79c167899bfcb7441a23590c5430"
-  integrity sha1-4MhH/O4eecFniZv8t0QaI1kMVDA=
-  dependencies:
-    "@babel/runtime" "^7.10.5"
-    import-html-entry "^1.9.0"
-    lodash "^4.17.11"
-    single-spa "5.8.1"
-    tslib "^1.10.0"
-
 qs@6.7.0:
   version "6.7.0"
   resolved "http://npm.laiye.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
@@ -9911,11 +9893,6 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-single-spa@5.8.1:
-  version "5.8.1"
-  resolved "http://npm.laiye.com/single-spa/-/single-spa-5.8.1.tgz#86c2575e297e31d8f06945944ec97e31851a59ae"
-  integrity sha1-hsJXXil+MdjwaUWUTsl+MYUaWa4=
-
 sisteransi@^1.0.5:
   version "1.0.5"
   resolved "http://npm.laiye.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
@@ -10673,7 +10650,7 @@ tsconfig-paths@^3.9.0:
     minimist "^1.2.0"
     strip-bom "^3.0.0"
 
-tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
   resolved "http://npm.laiye.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=

@@ -1,24 +1,30 @@
+/*
+ * @Author: D.Y
+ * @Date: 2021-03-29 15:48:55
+ * @LastEditTime: 2021-03-29 17:19:49
+ * @LastEditors: D.Y
+ * @FilePath: /nereus/src/App.tsx
+ * @Description: 
+ */
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { actions } from './store'
 
 function App() {
+  const goto = (title:string, href:string)=>{
+    window.history.pushState({}, title, href);
+  }
+
+  const login = ()=>{
+    actions.setGlobalState({
+      token:'123456'
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => goto('ploto', '/ploto')}>ploto</button>
+      <button onClick={() => login()}>login</button>
     </div>
   );
 }
