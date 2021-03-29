@@ -1,14 +1,14 @@
 /*
  * @Author: D.Y
  * @Date: 2021-03-29 16:00:08
- * @LastEditTime: 2021-03-29 17:21:03
+ * @LastEditTime: 2021-03-29 20:02:10
  * @LastEditors: D.Y
  * @FilePath: /nereus/packages/ploto/src/index.tsx
  * @Description: 
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.less';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
