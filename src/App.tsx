@@ -1,32 +1,42 @@
-/*
- * @Author: D.Y
- * @Date: 2021-03-29 15:48:55
- * @LastEditTime: 2021-03-29 17:19:49
- * @LastEditors: D.Y
- * @FilePath: /nereus/src/App.tsx
- * @Description: 
- */
-import React from 'react';
-import './App.css';
+import React,{Component} from 'react';
+import './App.less';
 import { actions } from './store'
+import { Menu, Button } from 'antd';
+import {
+  AppstoreOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  PieChartOutlined,
+  DesktopOutlined,
+  ContainerOutlined,
+  MailOutlined,
+} from '@ant-design/icons';
 
-function App() {
-  const goto = (title:string, href:string)=>{
-    window.history.pushState({}, title, href);
+export default class App extends React.Component {
+  changeApp(key:string){
+    window.history.pushState({}, key, `/${key}`);
   }
+  render() {
+    return (
+          <section className="app">
+            <aside className="app-aside">
+            <Menu
+                mode="inline"
+                theme="dark"
+                inlineCollapsed={true}
+                onClick={({key})=>{this.changeApp(key as string)}}
+              >
+                <Menu.Item key="ploto" icon={<PieChartOutlined />}>
+                  ploto
+                </Menu.Item>
+              </Menu>
+            </aside>
+            {/* <Button type="primary" onClick={() => goto('ploto', '/ploto')}>ploto</Button>
+            <Button type="primary" onClick={() => login()}>login</Button> */}
+          </section>
 
-  const login = ()=>{
-    actions.setGlobalState({
-      token:'123456'
-    })
+
+       
+    );
   }
-
-  return (
-    <div className="App">
-      <button onClick={() => goto('ploto', '/ploto')}>ploto</button>
-      <button onClick={() => login()}>login</button>
-    </div>
-  );
-}
-
-export default App;
+};
