@@ -1,13 +1,14 @@
 /*
  * @Author: D.Y
  * @Date: 2021-03-29 16:00:08
- * @LastEditTime: 2021-03-29 20:02:10
+ * @LastEditTime: 2021-03-30 10:44:50
  * @LastEditors: D.Y
  * @FilePath: /nereus/packages/ploto/src/index.tsx
  * @Description: 
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.less';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -15,9 +16,9 @@ import reportWebVitals from './reportWebVitals';
 function render(props:any) {
   const { container } = props;
   ReactDOM.render(
-    <React.StrictMode>
+    <BrowserRouter basename="/ploto">
       <App />
-    </React.StrictMode>,
+    </BrowserRouter>,
     container ? container.querySelector('#root') : document.querySelector('#root')
   );
 }

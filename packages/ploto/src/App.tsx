@@ -1,24 +1,20 @@
-import React from 'react';
+import React, {lazy} from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.less';
+import { Switch,Route,Redirect } from 'react-router-dom';
+import Login from './Login'
+import About from './About'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} className="App-logo" alt="logo" />
+      <br/>
+      <Switch>
+			<Route exact path='/' component={Login}/>
+			<Route path='/about' component={About}/>
+			<Redirect to='/' />
+		</Switch>   
     </div>
   );
 }
