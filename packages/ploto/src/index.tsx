@@ -1,7 +1,7 @@
 /*
  * @Author: D.Y
  * @Date: 2021-03-29 16:00:08
- * @LastEditTime: 2021-03-30 11:01:13
+ * @LastEditTime: 2021-03-30 11:41:14
  * @LastEditors: D.Y
  * @FilePath: /nereus/packages/ploto/src/index.tsx
  * @Description: 
@@ -12,6 +12,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.less';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ConfigProvider } from 'antd';
 
 function render(props:any) {
   const { container } = props;

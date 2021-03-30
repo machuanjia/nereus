@@ -1,7 +1,7 @@
 /*
  * @Author: D.Y
  * @Date: 2021-03-29 15:48:55
- * @LastEditTime: 2021-03-29 17:09:49
+ * @LastEditTime: 2021-03-30 11:41:36
  * @LastEditors: D.Y
  * @FilePath: /nereus/src/index.tsx
  * @Description: 
@@ -13,10 +13,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './register'
 import './store'
+import { ConfigProvider } from 'antd';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
