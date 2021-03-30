@@ -1,13 +1,13 @@
 /*
  * @Author: D.Y
  * @Date: 2021-03-29 16:42:42
- * @LastEditTime: 2021-03-29 20:02:44
+ * @LastEditTime: 2021-03-30 11:16:53
  * @LastEditors: D.Y
  * @FilePath: /nereus/packages/ploto/config-overrides.js
  * @Description: 
  */
 const { name } = require('./package');
-const { override, fixBabelImports, addLessLoader, addWebpackAlias } = require('customize-cra')
+const { override, fixBabelImports, addLessLoader, addWebpackAlias, addWebpackModuleRule } = require('customize-cra')
 const path = require('path');
 
 module.exports = {
@@ -22,6 +22,28 @@ module.exports = {
          javascriptEnabled: true,
          localIdentName: '[local]--[hash:base64:5]'
       }
+  }),
+  // addWebpackModuleRule({
+  //   test: /\.(png|jpe?g|gif|webp|woff2?|eot|ttf|otf)$/i,
+  //   use: [
+  //     {
+  //       loader: 'url-loader',
+  //       options: {},
+  //     },
+  //   ],
+  // }),
+
+  addWebpackModuleRule({
+    test: /\.(png|jpe?g|gif|webp|woff2?|eot|ttf|otf|svg)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          name: 'ploto/static/[name].[hash:8].[ext]',
+          publicPath:'http://localhost:3100'
+        }
+      },
+    ],
   }),
   // addWebpackAlias({      
       // "@": path.resolve(__dirname, "src"),        
